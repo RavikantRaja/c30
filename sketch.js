@@ -75,3 +75,10 @@ function mouseDragged(){
 function mouseReleased(){
     slingshot.fly();
 }
+
+function keyPressed(){
+    if(keyCode === 32){
+        Matter.Body.setAngle(bird.body,0);
+       slingshot.attach(bird.body);
+    }
+}
